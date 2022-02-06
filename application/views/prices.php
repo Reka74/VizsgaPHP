@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <tbody>
                         <?php foreach ($cardetails as $key => $value){$num=$value['cprice'];if($num < 1){$price = 'Hívjon!';}?>
                         <tr>
-                            <td><img src="<?php print($value['cimage']); ?>" alt="<?php print($value['ctype']); ?>"><div class="carname"><?php print($value['ctype']); ?></div></td>
+                            <td><img src="<?php print('assets/img/'.$value['cimage']); ?>" alt="<?php print($value['ctype']); ?>"><div class="carname"><?php print($value['ctype']); ?></div></td>
                             <td><?php if($num > 0){print($num.' Ft');} else {print($price);} ?></td>
                             <td><?php if($num > 0){print(($num*0.8).' Ft');} else {print($price);} ?></td>
                             <td><?php if($num > 0){print((($num*2)/3).' Ft');} else {print($price);} ?></td>
